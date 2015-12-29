@@ -3,9 +3,29 @@
   <head>
     <title>Fredrik Johansson</title>
     <meta charset="UTF-8">
+    
     <style>
+      @import url(https://fonts.googleapis.com/css?family=Raleway:400);
+    
+      html, body, .image-gradient {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
       body {
-        font-family: sans-serif;
+        font-family: "Raleway", sans-serif;
+        color: #F5F5F5;
+        
+        background: url(./BatmanVsJoker.jpg) no-repeat center center fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .image-gradient {
+        position: fixed;
+        background: linear-gradient(rgba(101, 101, 101, .52), rgba(43, 48, 53, .89)) center center fixed;
+        background-size: cover;
+        
       }
       .center {
         display: table;
@@ -21,9 +41,11 @@
     </style>
   </head>
   <body>
+    <div class="image-gradient"></div>
     <div class="center">
-      <h1>Portfolio of Fredrik Johansson</h1>
-      <h2>Under Construction</h2>
+      <img src="./fredrik-icon.png">
+      <h3>Portfolio of Fredrik Johansson</h3>
+      <h1>Under Construction</h2>
     </div>
   </body>
 </html>
