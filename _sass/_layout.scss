@@ -1,0 +1,481 @@
+/****************************************************
+ *
+ * This is the general layout
+ *
+ * © Fredrik Johansson
+ * 
+ ****************************************************/
+
+/**
+ * Header
+ */
+
+#fredrik-icon {
+  width: 132px;
+  height: 132px;
+  
+  @include media-mobile() {
+    width: 96px;
+    height: 96px;
+  }
+  margin: auto;
+} 
+
+header {
+  background-image: url("/assets/images/BatmanVsJoker.jpg");
+  background-color: #596875;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  color: $text-color-light;
+  overflow: hidden;
+  
+  #image-gradient {
+    background-image: linear-gradient(rgba(101, 101, 101, .52), rgba(43, 48, 53, .89));
+  }
+}
+
+.personal-info {
+  text-align: center;
+  padding-top: $box-size/2;
+  padding-bottom: $box-size/2;
+  margin-right: $box-size/2;
+  margin-left: $box-size/2;
+  
+  @include media-desktop() {
+    padding-top: $box-size;
+    padding-bottom: $box-size;
+  }
+
+  
+  .button {
+    display: block;
+    text-align: left;
+    font-size: $font-size-xbase;
+    margin: 16px auto;
+    width: 180px;
+    
+    
+    &.filled {
+      background-color: $background-color-light;
+      color: $text-color-dark;
+      
+      &:hover {
+        background-color: lighten($background-color-light, 15%);
+      }
+    }
+    &.outlined {
+      border-color: $text-color-light;
+      color: $text-color-light;
+      
+      &:hover {
+        border-color: lighten($text-color-light, 15%);
+        color: lighten($text-color-light, 15%);
+      }
+    }
+  }
+  
+  .name-title {
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-light;
+    margin: 10px 0 4px 0;
+  }
+  .subtitle {
+    margin: 4px 0 20px 0;
+  }
+}
+#header-pixelation {
+  z-index: 1; // bring in front of navbar
+  margin: auto;
+  
+  @include media-desktop() {
+    width: $content-width;
+  }
+  
+  @import "pixelations/header-pixelation";
+}
+
+
+/**
+ * Navigation
+ */
+nav {
+  height: $box-size;
+  display: table;
+  width: 100%;
+}
+.nav-padding {
+  background-color: $background-color-light;
+  display: table-cell;
+  width: auto;
+}
+
+.navigation {
+  height: $box-size;
+  display: table-cell;
+  position: relative;
+
+  
+  #end-nav {
+    float: right;
+    
+    @include media-query(680px) {
+      height: 100%;
+      background-color: transparent;
+      position: absolute;
+      right: 0;
+    }
+    
+    .last-link-nav {
+      background-color: $background-color-light;
+      width: 2*$box-size;
+      float: right;
+      text-align: center;
+      height: $box-size;
+      vertical-align: middle;
+      
+      @include media-query(680px) {
+        background-color: transparent;
+      }
+      
+      a {
+        height: 100%;
+        line-height: $box-size;
+        vertical-align: middle;
+      }
+    }
+    
+    #navigation-pixelation {
+      float: left;
+      
+      .box {
+        float: left;
+        position: static;
+      }
+      
+      @import "pixelations/navigation-pixelation";
+    }
+  }
+  
+  #main-nav {
+    background-color: $background-color-light;
+    white-space: nowrap;
+    overflow: hidden; // for dynamic sizing
+    height: 100%;
+    
+    @include media-query(680px) {
+      overflow: visible;
+      height: auto;
+    }
+    
+    
+    ul {
+      height: 100%;
+      
+      // for centering child
+      display: table;
+    }
+    
+    li {
+      font-family: $header-font-family;
+      
+      // vertical centering
+      display: table-cell;
+      vertical-align: middle;
+      
+      
+      @include media-query(680px) {
+        display: block;
+        margin-top: 2.3em;
+        margin-bottom: 2.3em;
+      }
+    }
+  }
+}
+
+
+/**
+ * Work
+ */
+  
+.work-showcase {
+  margin: $box-size $box-size/2;
+  
+  @include media-mobile() {
+    margin: $box-size/4 auto !important;
+    display: table;
+  }
+  
+  @include media-desktop() {
+    float: left;
+  }
+  
+  &:first-child {
+    margin-left: $box-size;  
+  }
+  &:last-child {
+    margin-right: $box-size;
+  }
+  
+  .showcase-description {
+    width: $box-size*3;
+  
+    h2 {
+      text-align: center;
+      margin: .4em;
+    }
+  }
+
+  .showcase-image {
+    width: 3*$box-size;
+    height: 3*$box-size;
+    position: relative;
+    display: inline-block;
+    
+    @import "pixelations/showcase-pixelation";
+    
+    img {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      display: block;
+      margin: auto;
+      width: 158px;
+      height: 158px;
+    }
+  }
+}
+@include media-tablet() {
+  .work-showcase {
+    display: table;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  
+    .showcase-image{
+      display: inline-block;
+    }
+    .showcase-description {
+      width: 4*$box-size;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 20px;
+    }
+  }
+}
+
+#calculator-identity-showcase {
+  .box {background-color: #06AC94;}
+}
+#chat-server-showcase {
+  .box {background-color: #AD45D3;}
+}
+#symbolism-vs-text-showcase {
+  .box {background-color: #F39700;}
+}
+
+
+/**
+ * Recent Work
+ */
+.recent-work {
+  margin-top: 40px;
+  overflow: hidden;
+}
+#recent-work-pixelation {
+  width: $box-size;
+  margin: auto;  
+
+  .box {
+    background-color: #D8D8D8;
+  }
+  
+  @import "pixelations/recent-work-pixelation"
+  
+}
+
+/**
+ * Work
+ */
+
+
+/**
+ * Project Lemon Banner
+ */ 
+.project-lemon-banner .button {
+  float: right;
+  margin-top: $box-size/2;
+}
+@include media-mobile() {
+  .project-lemon-banner {
+    
+    .col1-2 {
+      width: 70%;
+    }
+    .col2-2 {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    
+    .button {
+      margin: $box-size/4;
+    }
+  }
+}
+ 
+/**
+ * Project Lemon
+ */
+
+/**
+ * Contact
+ */
+.contact {
+  margin: $box-size/4;
+  text-align: center;
+
+  & h2 {
+    line-height: 3;
+  }
+  & p {
+    font-family: $header-font-family;
+    font-size: $font-size-medium;
+    line-height: 2.7;
+    cursor: pointer;
+  }
+}
+
+/**
+ * Page
+ */
+.post {
+  margin: $box-size/2 auto $box-size auto;
+  
+  @include media-desktop() {
+    width: $content-width;
+  }
+  
+  .left-text {
+    float: left;
+    width: 60%;
+    
+    @include media-mobile() {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  .right-image {
+    width: 40%;
+    float: right;
+    
+    @include media-mobile() {
+      width: 250px;
+    }
+  }
+}
+.post-content {
+  @include media-query(880px) {
+    width: 80%;
+  }
+  width: 60%;
+  margin: auto;
+}
+
+.post-content {
+  @extend %clearfix;
+
+  h1 img {
+    width: 3em;
+  }
+}
+#myface {
+  width: 10em;
+  float: right;
+  padding: .5em;
+}
+
+/**
+ * Footer
+ */
+footer {
+  background-color: $background-color-dark;
+  margin-top: $box-size*5/3;
+  padding: $box-size/2 0;
+  
+  @include media-query(550px) {
+    margin-top: $box-size*2;
+  }
+
+  p, a {
+    color: $text-color-light;
+  }
+  
+  .site-map {
+    float: left;
+    font-size: $font-size-medium;
+    display: inline-block;
+    margin-left: $box-size/2;
+    margin-bottom: $box-size/2;
+    
+    li {
+      font-family: $header-font-family;
+      padding-right: $box-size/3;
+      float: left;
+      @include media-mobile() {
+        float: none;
+        margin-bottom: 12px;
+      }
+      
+      a:hover {text-decoration: none;}
+      &:last-child {padding-right: 0;}
+    }
+  }
+  
+  .social-links {
+    margin-right: $box-size/2;
+    margin-left: $box-size/2;
+    float: right;
+    
+    @include media-mobile() {
+      a {
+        display: block;
+      }
+    }
+  }
+  
+  .footnote {
+    margin-top: 20px;
+    margin-left: $box-size/2;
+  }
+}
+
+#footer-pixelation {
+  position: relative;
+  top: -$box-size/2;
+  width: 100%;
+
+  .box {
+    background-color: $background-color-dark;
+  }
+  
+  @import "pixelations/footer-pixelation";
+}
+
+
+.social-links { 
+  display: inline-block;
+  
+  img {
+    width: $box-size;
+    height: $box-size;
+  }
+  @include media-mobile() {
+    img {
+      width: $box-size*3/4;
+      height: $box-size*3/4;
+    }
+  }
+}
+

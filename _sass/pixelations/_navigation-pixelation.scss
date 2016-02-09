@@ -1,0 +1,64 @@
+/****************************************************
+ *
+ * This discribes the pattern for the pixels at
+ * the navigation
+ *
+ * © Fredrik Johansson
+ * 
+ ****************************************************/
+ 
+.box {
+  background-color: $background-color-light;
+  
+  @include media-query($mobile-small) {
+    display: none;
+  }
+
+  &:nth-child(1) {
+    opacity: .40;
+    
+    @include media-query(760px) {
+      display: block;
+      opacity: .67;
+    }
+    
+    @include media-query(680px) {
+      background-color: #B4B7B9;
+      opacity: 1;
+    }
+    
+    @include media-query(424px) {
+      display: none;
+    }
+    
+  }
+  &:nth-child(2) {
+    opacity: .14;
+    
+    @include media-query(800px) {
+      display: none;
+    }
+  }
+  &:nth-child(3) {
+    opacity: .44;
+    display: none;
+    
+    @include media-desktop() {
+      display: block;
+    }
+  }
+  &:nth-child(4) {
+    opacity: .44;
+    
+    @include media-query(880px) {
+      display: none;
+    }
+  }
+  &:nth-child(5) {
+    opacity: .88;
+    
+    @include media-query(760px) {
+      display: none;
+    }
+  }
+}

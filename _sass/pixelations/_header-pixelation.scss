@@ -1,0 +1,142 @@
+/****************************************************
+ *
+ * This discribes the pattern for the pixels at
+ * the header
+ *
+ * © Fredrik Johansson
+ * 
+ ****************************************************/
+
+.box {
+  background: $background-color-light;
+
+  &:nth-child(1) {
+    top: -2*$box-size;
+    left: -2*$box-size;
+    opacity: .18;
+  }
+  &:nth-child(2) {
+    top: -2*$box-size;
+    left: -1*$box-size;
+    opacity: .32;
+  }
+  &:nth-child(3) {
+    top: -2*$box-size;
+    left: 0*$box-size;
+    opacity: .14;
+    
+    @include media-query(550px) {
+      left: -$box-size/2;
+    }
+  }
+  &:nth-child(4) {
+    top: -2*$box-size;
+    right: 0*$box-size;
+    opacity: .44;
+    
+    @include media-query(550px) {
+      right: -$box-size/2;
+    }
+    
+    @include media-query(480px) {
+      display: none;
+    }
+  }
+  &:nth-child(5) {
+    top: -1*$box-size;
+    left: -3*$box-size;
+    opacity: .44;
+  }
+  &:nth-child(6) {
+    top: -1*$box-size;
+    left: -2*$box-size;
+    opacity: .60;
+  }
+  &:nth-child(7) {
+    top: -1*$box-size;
+    left: -1*$box-size;
+    opacity: .70;
+  }
+  &:nth-child(8) {
+    top: -1*$box-size;
+    left: 0*$box-size;
+    opacity: .44;
+    
+    @include media-query(550px) {
+      left: -$box-size/2;
+    }
+  }
+  &:nth-child(9) {
+    top: -1*$box-size;
+    left: 1*$box-size;
+    opacity: .14;
+    
+    @include media-query(550px) {
+      left: $box-size/2;
+    }
+    
+    @include media-query(480px) {
+      display: none;
+    }
+  }
+  &:nth-child(10) {
+    top: -1*$box-size;
+    right: 4*$box-size;
+    opacity: .07;
+    
+    display: none;
+    @include media-desktop() {
+      display: block;
+    }
+  }
+  &:nth-child(11) {
+    top: -1*$box-size;
+    right: 3*$box-size;
+    
+    opacity: .07;
+    @include media-desktop() {
+      opacity: .14;
+    }
+    @include media-query(880px) {
+      display: none;
+    }
+  }
+  &:nth-child(12) {
+    top: -1*$box-size;
+    right: 2*$box-size;
+    opacity: .14;
+    
+    @include media-query(720px) {
+      display: none;
+    }
+  }
+  &:nth-child(13) {
+    top: -1*$box-size;
+    right: 1*$box-size;
+    opacity: .44;
+    
+    @include media-query(550px) {
+      right: $box-size/2;
+    }
+    @include media-query(470px) {
+      right: -$box-size/2;
+    }
+  }
+  &:nth-child(14) {
+    top: -1*$box-size;
+    right: 0*$box-size;
+    opacity: .69;
+    
+    @include media-query(550px) {
+      right: -$box-size/2;
+    }
+    @include media-query(470px) {
+      display: none;
+    }
+  }
+  &:nth-child(15) {
+    top: -1*$box-size;
+    right: -1*$box-size;
+    opacity: .30;
+  }
+}

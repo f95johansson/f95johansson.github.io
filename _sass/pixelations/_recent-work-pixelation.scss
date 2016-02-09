@@ -1,0 +1,64 @@
+.box {
+  @include media-tablet() {
+    display: none;
+  }
+
+  &:nth-child(1) {
+    top: -1*$box-size;
+    left: 3*$box-size;
+  }
+  &:nth-child(2) {
+    opacity: .59;
+    left: -4*$box-size;
+  }
+  &:nth-child(3) {
+    left: -3*$box-size;
+  }
+  &:nth-child(4) {
+    left: -2*$box-size;
+  }
+  &:nth-child(5) {
+    left: -1*$box-size;
+  }
+  &:nth-child(6) {
+  }
+  &:nth-child(7) {
+    left: 1*$box-size;
+  }
+  &:nth-child(8) {
+    left: 2*$box-size;
+  }
+  &:nth-child(9) {
+    left: 3*$box-size;
+  }
+  &:nth-child(10) {
+    left: 4*$box-size;
+  }
+  &:nth-child(11) {
+    opacity: .58;
+    left: 5*$box-size;
+  }
+  &:nth-child(12) {
+    top: 1*$box-size;
+    left: -2*$box-size;
+  }
+  &:nth-child(13) {
+    top: 1*$box-size;
+    left: 2*$box-size;
+  }
+  &:nth-child(14) {
+    opacity: .72;
+    top: 2*$box-size;
+    left: -2*$box-size;
+  }
+  &:nth-child(15) {
+    opacity: 1;
+    top: 2*$box-size;
+    left: 2*$box-size;
+  }
+  &:nth-child(16) {
+    opacity: .49;
+    top: 3*$box-size;
+    left: 2*$box-size;
+  }
+}
