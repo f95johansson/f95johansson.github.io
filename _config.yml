@@ -1,0 +1,20 @@
+# Site settings
+title: Fredrik Johansson
+description:
+  This is the portfolio of Fredrik Johansson. It includes some of his work
+  and projects he has been a part of.
+baseurl: ""
+  
+# Build settings
+markdown: kramdown
+
+
+navigation:
+    - text: Home
+      url: /
+    - text: Work
+      url: /work/
+    - text: Project Lemon
+      url: /projectlemon/
+    - text: About Me
+      url: /about/

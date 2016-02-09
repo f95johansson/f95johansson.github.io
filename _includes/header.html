@@ -1,0 +1,31 @@
+<header>
+  <div id="image-gradient">
+
+    <div class="personal-info">
+      <img id="fredrik-icon" src="/assets/images/fredrik-icon.png" srcset="/assets/images/fredrik-icon.png 1x, /assets/images/fredrik-icon@2x.png 2x" alt="Fredrik Icon" >
+      <h2 class="name-title">Fredrik Johansson</h2>
+      <h3 class="subtitle">
+        UI/UX, Interaction designer and Software Developer
+        <br>
+        Currently studying Interaction Technology and Design at Umeå University
+      </h3>
+      
+      <a class="button filled" href="https://github.com/f95johansson">
+        <span class="icon">{% include /vectors/github-icon.svg %}</span> GitHub
+      </a>
+      <a class="button outlined" href="https://github.com/ProjectLemon">
+        <span class="icon icon-white">{% include /vectors/github-icon.svg %}</span> Project Lemon
+      </a>
+    </div>
+    
+    <div id="header-pixelation" class="pixelation">
+      {% for i in (1..15) %}
+      <div class="box"></div>
+      {% endfor %}
+    </div>
+    
+    {% include nav.html %}
+  
+  
+  </div>
+</header>

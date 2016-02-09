@@ -1,0 +1,54 @@
+<section class="recent-work">
+  <h1>Recent Work</h1>
+  
+  <div id="recent-work-pixelation" class="pixelation">
+    {% for i in (1..16) %}
+    <div class="box"></div>
+    {% endfor %}
+  </div>
+  
+  <div class="wrapper">
+    
+    <div id="chat-server-showcase" class="work-showcase">
+      <a href="/work/chatserver/" class="showcase-image">
+        {% for i in (1..9) %}
+        <div class="box"></div>
+        {% endfor %}
+        
+        <img src="/assets/images/chat-server-icon.png" alt="Chat Server icon">
+      </a>
+      <div class="showcase-description">
+        {% markdown texts/summaries/chat-server-summary.md %}
+      </div>
+    </div>
+    
+    
+    <div id="symbolism-vs-text-showcase" class="work-showcase">
+      <a href="/work/symbolismvstext/" class="showcase-image">
+        {% for i in (1..9) %}
+        <div class="box"></div>
+        {% endfor %}
+        
+        <img src="/assets/images/symbolism-vs-text-icon.png" srcset="/assets/images/symbolism-vs-text-icon.png 1x, /assets/images/symbolism-vs-text-icon@2x.png 2x" alt="Symbolism Vs Text icon">
+      </a>
+      <div class="showcase-description">
+        {% markdown texts/summaries/symbolism-vs-text-summary.md %}
+      </div>
+    </div>
+    
+    <div id="calculator-identity-showcase" class="work-showcase">
+      <a href="/work/calculatoridentity/" class="showcase-image">
+        {% for i in (1..9) %}
+        <div class="box"></div>
+        {% endfor %}
+        
+        <img src="/assets/images/calculator-identity-icon.png" srcset="/assets/images/calculator-identity-icon.png 1x, /assets/images/calculator-identity-icon@2x.png 2x" alt="Calculator Identity icon">
+      </a>
+      <div class="showcase-description">
+        {% markdown texts/summaries/calculator-identity-summary.md %}
+      </div>
+    </div>
+    
+  </div>
+  
+</section>

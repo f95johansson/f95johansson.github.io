@@ -1,0 +1,39 @@
+<nav>
+  <div class="nav-padding padding-left"></div>
+
+  <div class="wrapper navigation">
+  
+    {% assign current_url = page.url | remove:'index.html' %}
+  
+    <div id="end-nav">
+      <div id="navigation-pixelation">
+        {% for i in (1..5) %}
+        <div class="box"></div>
+        {% endfor %}
+      </div>
+    
+    
+      {% assign last_link = site.navigation | last %}
+      <span class="last-link-nav">
+        <a class="button {% if current_url == last_link.url %} filled{% endif %}" href="{{last_link.url | prepend: site.baseurl }}">{{last_link.text}}</a>
+      </span>
+      
+    </div>
+  
+    <div id="main-nav">
+    
+      <ul>
+        {% assign length_except_last = site.navigation.size | minus: 1 %}
+        {% for link in site.navigation limit:length_except_last %}
+        <li>
+          <a class="button{% if current_url == link.url %} filled{% endif %}" href="{{link.url | prepend: site.baseurl }}">{{link.text}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      
+    </div>
+    
+  </div>
+
+  <div class="nav-padding padding-right"></div>
+</nav>
