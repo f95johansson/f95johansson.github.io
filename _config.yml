@@ -8,6 +8,13 @@ baseurl: ""
 # Build settings
 markdown: kramdown
 
+# Monify settings
+sass:
+  style: compressed
+
+compress_html:
+  comments: ["<!--", "-->"]
+
 
 navigation:
     - text: Home
