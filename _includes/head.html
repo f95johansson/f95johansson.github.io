@@ -3,6 +3,7 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="Fredrik Johansson">
   <meta name="viewport" content="width=device-width">
   
   <!-- Above the Fold styling -->
@@ -10,9 +11,12 @@
     {% capture inline %}{% include code/inline.scss %}{% endcapture %}
     {{ inline | scssify }}
   </style>
+  
+  <!-- Async external css loading -->
   <script>
     {% include code/loadCSS.js %}
   </script>
+  <!-- fallback -->
   <noscript>
     <link rel="stylesheet" href="/assets/css/style.css">
   </noscript>
