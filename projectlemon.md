@@ -9,4 +9,4 @@ Project lemon started as with the goal to do more projects beside those from sch
   
 We are currently working on two projects, designing logos for [Umeå Association of International Affairs](http://upfu.org/), and also developing our own party game for android, [Intense Orange](https://github.com/ProjectLemon/intense-orange).
 
-![Project Lemon Logo](/assets/images/project-lemon-logo.png)
+![Project Lemon Logo](/assets/images/project-lemon-logo.png){: srcset="/assets/images/project-lemon-logo.png 1x, /assets/images/project-lemon-logo@2x.png 2x"}
