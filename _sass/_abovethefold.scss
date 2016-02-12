@@ -1,0 +1,363 @@
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Text
+ */
+p {
+  color: $text-color-lightdark;
+  font-family: $body-font-family;
+  line-height: 1.6em;
+  margin: 1em 0;
+}
+.subtitle {
+  font-size: $font-size-xbase;
+  font-family: $body-font-family;
+  opacity: .86;
+}
+// Headings:
+h1 {
+  text-align: center;
+  font-weight: $font-weight-light;
+  font-size: $font-size-huge;
+  margin: .67em 0;
+}
+h2 {
+  font-weight: $font-weight-base;
+  font-size: $font-size-large;
+}
+h3, h4, h5, h6 {
+  font-weight: $font-weight-light;
+}
+
+/**
+ * Links
+ */
+a {
+  color: $accent-color;
+  text-decoration: none;
+  
+  &:hover {
+    color: lighten($accent-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Icons
+ */
+.icon {
+
+  height: 1em;
+  width: 1em;
+
+  > svg {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    vertical-align: top;
+
+    path {
+      fill: $text-color-dark;
+    }
+  }
+}
+.icon-white > svg path {
+  fill: $text-color-light;
+}
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.img-inline-text {
+  display: inline;
+  height: 1em;
+}
+
+/**
+ * Basic styling
+ */
+html {
+  font-size: 62.5%; // default
+  
+  @media (max-width: $desktop) {
+    font-size: 58%;    
+  }
+}
+
+body {
+  font: $font-weight-base $font-size-base-em $header-font-family;
+  color: $text-color-dark;
+  background-color: $background-color;
+}
+
+
+/**
+ * Buttons
+ */
+.button {
+  border-radius: .24em;
+  padding: .6em 1.5em;
+  margin: .6em;
+  transition: background-color .2s;
+  font-size: $font-size-medium;
+  color: $text-color-dark;
+  
+  
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    background-color: rgba(0,0,0,0.04);
+  }
+  
+  &.filled {
+    background-color: $accent-color;
+    color: $text-color-light;
+    &:hover {
+      background-color: lighten($accent-color, 2%);
+    }
+    &:active{
+      background-color: lighten($accent-color, 5%);
+    }
+  }
+  
+  &.outlined {
+    border: 2px solid $text-color-light;
+    color: $text-color-light;
+  }
+}
+.wrapper {
+  @media (max-width: $desktop) {
+    width: 100%;
+  }
+  @media (min-width: $desktop+1) {
+    width: $content-width;
+  }
+  margin: auto;
+  @extend %clearfix;
+}
+
+
+/**
+ * Header
+ */
+
+#fredrik-icon {
+  width: 132px;
+  height: 132px;
+  
+  @include media-mobile() {
+    width: 96px;
+    height: 96px;
+  }
+  margin: auto;
+} 
+
+header {
+  background-color: #596875;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  color: $text-color-light;
+  overflow: hidden;
+  
+  #image-gradient {
+    background-image: linear-gradient(rgba(101, 101, 101, .52), rgba(43, 48, 53, .89));
+  }
+}
+
+.personal-info {
+  text-align: center;
+  padding-top: $box-size/2;
+  padding-bottom: $box-size/2;
+  margin-right: $box-size/2;
+  margin-left: $box-size/2;
+  
+  @include media-desktop() {
+    padding-top: $box-size;
+    padding-bottom: $box-size;
+  }
+
+  
+  .button {
+    display: block;
+    text-align: left;
+    font-size: $font-size-xbase;
+    margin: 16px auto;
+    width: 180px;
+    
+    
+    &.filled {
+      background-color: $background-color-light;
+      color: $text-color-dark;
+      
+      &:hover {
+        background-color: lighten($background-color-light, 15%);
+      }
+    }
+    &.outlined {
+      border-color: $text-color-light;
+      color: $text-color-light;
+      
+      &:hover {
+        border-color: lighten($text-color-light, 15%);
+        color: lighten($text-color-light, 15%);
+      }
+    }
+  }
+  
+  .name-title {
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-light;
+    margin: 10px 0 4px 0;
+  }
+  .subtitle {
+    margin: 4px 0 20px 0;
+  }
+}
+#header-pixelation {
+  z-index: 1; // bring in front of navbar
+  margin: auto;
+  
+  @include media-desktop() {
+    width: $content-width;
+  }
+}
+
+/**
+ * Navigation
+ */
+nav {
+  height: $box-size;
+  display: table;
+  width: 100%;
+}
+.nav-padding {
+  background-color: $background-color-light;
+  display: table-cell;
+  width: auto;
+}
+
+.navigation {
+  height: $box-size;
+  display: table-cell;
+  position: relative;
+
+  
+  #end-nav {
+    float: right;
+    
+    @include media-query(680px) {
+      height: 100%;
+      background-color: transparent;
+      position: absolute;
+      right: 0;
+    }
+    
+    .last-link-nav {
+      background-color: $background-color-light;
+      width: 2*$box-size;
+      float: right;
+      text-align: center;
+      height: $box-size;
+      vertical-align: middle;
+      
+      @include media-query(680px) {
+        background-color: transparent;
+      }
+      
+      a {
+        height: 100%;
+        line-height: $box-size;
+        vertical-align: middle;
+      }
+    }
+    
+    #navigation-pixelation {
+      float: left;
+      
+      .box {
+        float: left;
+        position: static;
+      }
+    }
+  }
+  
+  #main-nav {
+    background-color: $background-color-light;
+    white-space: nowrap;
+    overflow: hidden; // for dynamic sizing
+    height: 100%;
+    
+    @include media-query(680px) {
+      overflow: visible;
+      height: auto;
+    }
+    
+    
+    ul {
+      height: 100%;
+      
+      // for centering child
+      display: table;
+    }
+    
+    li {
+      font-family: $header-font-family;
+      
+      // vertical centering
+      display: table-cell;
+      vertical-align: middle;
+      
+      
+      @include media-query(680px) {
+        display: block;
+        margin-top: 2.3em;
+        margin-bottom: 2.3em;
+      }
+    }
+  }
+}
+
+/**
+ * Page
+ */
+.post {
+  margin: $box-size/2 auto $box-size auto;
+  
+  @include media-desktop() {
+    width: $content-width;
+  }
+}
+.post-content {
+  @include media-query(880px) {
+    width: 80%;
+  }
+  width: 60%;
+  margin: auto;
+}
+.post-content {
+  @extend %clearfix;
+
+  h1 img {
+    width: 3em;
+  }
+}
+#myface {
+  width: 10em;
+  float: right;
+  padding: .5em;
+}
