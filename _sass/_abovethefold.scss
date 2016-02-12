@@ -1,3 +1,30 @@
+header {
+  background-image: url("/assets/images/BatmanVsJoker.jpg");
+}
+#header-pixelation {
+  @import "pixelations/header-pixelation";
+}
+
+/**
+ * Navigation
+ */
+#navigation-pixelation {
+  @import "pixelations/navigation-pixelation";
+}
+/**
+ * Pixelation
+ */
+.pixelation {
+  position: relative;
+}
+.box {
+  position: absolute;
+  width: $box-size;
+  height: $box-size;
+}
+
+
+
 
 /**
  * Reset some basic elements

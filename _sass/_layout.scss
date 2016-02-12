@@ -11,19 +11,6 @@
  */
 
 
-header {
-  background-image: url("/assets/images/BatmanVsJoker.jpg");
-}
-#header-pixelation {
-  @import "pixelations/header-pixelation";
-}
-
-/**
- * Navigation
- */
-#navigation-pixelation {
-  @import "pixelations/navigation-pixelation";
-}
 
 /**
  * Work
