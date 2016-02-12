@@ -1,99 +1,14 @@
 ---
 ---
-/****************************************************
- *
- * This is only the setup of all of the styling
- *
- * © Fredrik Johansson 2015
- * 
- ****************************************************/
-
-@charset "utf-8";
-
-/**
- * Fonts
- */
-
-/**
- * Variables
- */
-// Width of the content area
-$content-width:   1040px;
-
-$mobile-small: 480px;
-$mobile:       640px;
-$desktop:     1040px;
-
-// Fonts settings
-$header-font-family: "Raleway", Helvetica, Arial, sans-serif;
-$body-font-family:   "Merriweather", serif;
-$font-size-base:    1.4rem;
-$font-size-base-em:  1.4em;
-$font-size-xbase:   1.6rem;
-$font-size-medium:  1.8rem;
-$font-size-large:   2.4rem;
-$font-size-xlarge:  2.6rem;
-$font-size-huge:    4.2rem;
-$font-size-small:   $font-size-base * 0.875;
-$font-weight-base:     400;
-$font-weight-light:    300;
-$font-weight-bold:     700;
-$base-line-height:     1.5;
-
-$box-size:            80px;
-$box-size-percent: 7.6923%;
-
-// Colors
-$text-color-dark:        #4A4A4A;
-$text-color-lightdark:   lighten(#4A4A4A, 10%);
-$text-color-light:       #F5F5F5;
-$text-color-light:       #F5F5F5;
-$background-color:       #F5F5F5;
-$background-color-light: #F5F5F5;
-$background-color-dark:  #37474F;
-$color-light-gray:       #e8e8e8;
-$accent-color:           #06AC94;
-
-/**
- * Mixins
- */
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-@mixin media-desktop() {
-  @media (min-width: $desktop+1) {
-    @content;
-  }
-}
-@mixin media-tablet() {
-  @media (min-width: $mobile+1) and (max-width: $desktop) {
-    @content;
-  }
-}
-@mixin media-mobile() {
-  @media (max-width: $mobile) {
-    @content;
-  }
-}
-@mixin parent-vertical-align {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-@mixin vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
 
 
 /**
- * Essential, common design
+ * Scss setup
  */ 
+@import "setup";
+/**
+ * Actuall css code;
+ */
 @import "base", "layout", "syntax";
 
 
