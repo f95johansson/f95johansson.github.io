@@ -1,0 +1,2 @@
+function loadCSS(href){var ss = window.document.createElement('link'),ref = window.document.getElementsByTagName('head')[0];ss.rel = 'stylesheet';ss.href = href;ss.media = 'only x';ref.parentNode.insertBefore(ss, ref);setTimeout( function(){ss.media = 'all';},0);}
+loadCSS('/assets/css/style.css');
