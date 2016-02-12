@@ -7,51 +7,11 @@
  * 
  ****************************************************/
 
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-/**
- * Basic styling
- */
-html {
-  font-size: 62.5%; // default
-  
-  @media (max-width: $desktop) {
-    font-size: 58%;    
-  }
-}
-* {
-}
-body {
-  font: $font-weight-base $font-size-base-em $header-font-family;
-  color: $text-color-dark;
-  background-color: $background-color;
-}
 
 
 /**
  * Text
  */
-p {
-  color: $text-color-lightdark;
-  font-family: $body-font-family;
-  line-height: 1.6em;
-  margin: 1em 0;
-}
-.subtitle {
-  font-size: $font-size-xbase;
-  font-family: $body-font-family;
-  opacity: .86;
-}
 strong {
   font-weight: $font-weight-bold;
   color: darken($text-color-dark, 10%);
@@ -70,70 +30,7 @@ strong {
   display: none;
 }
 
-// Headings:
-h1 {
-  text-align: center;
-  font-weight: $font-weight-light;
-  font-size: $font-size-huge;
-  margin: .67em 0;
-}
-h2 {
-  font-weight: $font-weight-base;
-  font-size: $font-size-large;
-}
-h3, h4, h5, h6 {
-  font-weight: $font-weight-light;
-}
 
-
-/**
- * Links
- */
-a {
-  color: $accent-color;
-  text-decoration: none;
-  
-  &:hover {
-    color: lighten($accent-color, 10%);
-    text-decoration: underline;
-  }
-}
-
-/**
- * Buttons
- */
-.button {
-  border-radius: .24em;
-  padding: .6em 1.5em;
-  margin: .6em;
-  transition: background-color .2s;
-  font-size: $font-size-medium;
-  color: $text-color-dark;
-  
-  
-  &:hover {
-    text-decoration: none;
-  }
-  &:active {
-    background-color: rgba(0,0,0,0.04);
-  }
-  
-  &.filled {
-    background-color: $accent-color;
-    color: $text-color-light;
-    &:hover {
-      background-color: lighten($accent-color, 2%);
-    }
-    &:active{
-      background-color: lighten($accent-color, 5%);
-    }
-  }
-  
-  &.outlined {
-    border: 2px solid $text-color-light;
-    color: $text-color-light;
-  }
-}
 
 /**
  * Pixelation
@@ -145,18 +42,6 @@ a {
   position: absolute;
   width: $box-size;
   height: $box-size;
-}
-
-/**
- * Images
- */
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-.img-inline-text {
-  display: inline;
-  height: 1em;
 }
 
 
@@ -209,16 +94,6 @@ img {
   }
 }
 
-.wrapper {
-  @media (max-width: $desktop) {
-    width: 100%;
-  }
-  @media (min-width: $desktop+1) {
-    width: $content-width;
-  }
-  margin: auto;
-  @extend %clearfix;
-}
 
 
 
@@ -296,40 +171,3 @@ pre {
 }
 
 
-
-/**
- * Clearfix
- */
-%clearfix {
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-
-
-/**
- * Icons
- */
-.icon {
-
-  height: 1em;
-  width: 1em;
-
-  > svg {
-    display: inline-block;
-    height: 1em;
-    width: 1em;
-    vertical-align: top;
-
-    path {
-      fill: $text-color-dark;
-    }
-  }
-}
-.icon-white > svg path {
-  fill: $text-color-light;
-}

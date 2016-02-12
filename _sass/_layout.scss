@@ -5,194 +5,25 @@
  * © Fredrik Johansson
  * 
  ****************************************************/
-
+ 
 /**
  * Header
  */
 
-#fredrik-icon {
-  width: 132px;
-  height: 132px;
-  
-  @include media-mobile() {
-    width: 96px;
-    height: 96px;
-  }
-  margin: auto;
-} 
 
 header {
   background-image: url("/assets/images/BatmanVsJoker.jpg");
-  background-color: #596875;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 40%;
-  color: $text-color-light;
-  overflow: hidden;
-  
-  #image-gradient {
-    background-image: linear-gradient(rgba(101, 101, 101, .52), rgba(43, 48, 53, .89));
-  }
-}
-
-.personal-info {
-  text-align: center;
-  padding-top: $box-size/2;
-  padding-bottom: $box-size/2;
-  margin-right: $box-size/2;
-  margin-left: $box-size/2;
-  
-  @include media-desktop() {
-    padding-top: $box-size;
-    padding-bottom: $box-size;
-  }
-
-  
-  .button {
-    display: block;
-    text-align: left;
-    font-size: $font-size-xbase;
-    margin: 16px auto;
-    width: 180px;
-    
-    
-    &.filled {
-      background-color: $background-color-light;
-      color: $text-color-dark;
-      
-      &:hover {
-        background-color: lighten($background-color-light, 15%);
-      }
-    }
-    &.outlined {
-      border-color: $text-color-light;
-      color: $text-color-light;
-      
-      &:hover {
-        border-color: lighten($text-color-light, 15%);
-        color: lighten($text-color-light, 15%);
-      }
-    }
-  }
-  
-  .name-title {
-    font-size: $font-size-xlarge;
-    font-weight: $font-weight-light;
-    margin: 10px 0 4px 0;
-  }
-  .subtitle {
-    margin: 4px 0 20px 0;
-  }
 }
 #header-pixelation {
-  z-index: 1; // bring in front of navbar
-  margin: auto;
-  
-  @include media-desktop() {
-    width: $content-width;
-  }
-  
   @import "pixelations/header-pixelation";
 }
-
 
 /**
  * Navigation
  */
-nav {
-  height: $box-size;
-  display: table;
-  width: 100%;
+#navigation-pixelation {
+  @import "pixelations/navigation-pixelation";
 }
-.nav-padding {
-  background-color: $background-color-light;
-  display: table-cell;
-  width: auto;
-}
-
-.navigation {
-  height: $box-size;
-  display: table-cell;
-  position: relative;
-
-  
-  #end-nav {
-    float: right;
-    
-    @include media-query(680px) {
-      height: 100%;
-      background-color: transparent;
-      position: absolute;
-      right: 0;
-    }
-    
-    .last-link-nav {
-      background-color: $background-color-light;
-      width: 2*$box-size;
-      float: right;
-      text-align: center;
-      height: $box-size;
-      vertical-align: middle;
-      
-      @include media-query(680px) {
-        background-color: transparent;
-      }
-      
-      a {
-        height: 100%;
-        line-height: $box-size;
-        vertical-align: middle;
-      }
-    }
-    
-    #navigation-pixelation {
-      float: left;
-      
-      .box {
-        float: left;
-        position: static;
-      }
-      
-      @import "pixelations/navigation-pixelation";
-    }
-  }
-  
-  #main-nav {
-    background-color: $background-color-light;
-    white-space: nowrap;
-    overflow: hidden; // for dynamic sizing
-    height: 100%;
-    
-    @include media-query(680px) {
-      overflow: visible;
-      height: auto;
-    }
-    
-    
-    ul {
-      height: 100%;
-      
-      // for centering child
-      display: table;
-    }
-    
-    li {
-      font-family: $header-font-family;
-      
-      // vertical centering
-      display: table-cell;
-      vertical-align: middle;
-      
-      
-      @include media-query(680px) {
-        display: block;
-        margin-top: 2.3em;
-        margin-bottom: 2.3em;
-      }
-    }
-  }
-}
-
 
 /**
  * Work
@@ -298,6 +129,30 @@ nav {
  * Work
  */
 
+/**
+ * Page
+ */
+.post {
+  
+  .left-text {
+    float: left;
+    width: 60%;
+    
+    @include media-mobile() {
+      float: none;
+      width: 100%;
+    }
+  }
+  
+  .right-image {
+    width: 40%;
+    float: right;
+    
+    @include media-mobile() {
+      width: 250px;
+    }
+  }
+}
 
 /**
  * Project Lemon Banner
@@ -346,55 +201,6 @@ nav {
   }
 }
 
-/**
- * Page
- */
-.post {
-  margin: $box-size/2 auto $box-size auto;
-  
-  @include media-desktop() {
-    width: $content-width;
-  }
-  
-  .left-text {
-    float: left;
-    width: 60%;
-    
-    @include media-mobile() {
-      float: none;
-      width: 100%;
-    }
-  }
-  
-  .right-image {
-    width: 40%;
-    float: right;
-    
-    @include media-mobile() {
-      width: 250px;
-    }
-  }
-}
-.post-content {
-  @include media-query(880px) {
-    width: 80%;
-  }
-  width: 60%;
-  margin: auto;
-}
-
-.post-content {
-  @extend %clearfix;
-
-  h1 img {
-    width: 3em;
-  }
-}
-#myface {
-  width: 10em;
-  float: right;
-  padding: .5em;
-}
 
 /**
  * Footer
