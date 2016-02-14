@@ -7,8 +7,9 @@ baseurl: ""
   
 # Build settings
 markdown: kramdown
+exclude: ["/assets/images-fullsize"]
 
-# Monify settings
+# Minify settings
 sass:
   style: compressed
 
