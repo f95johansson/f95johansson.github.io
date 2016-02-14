@@ -18,7 +18,8 @@
         <img src="/assets/images/chat-server-icon.png" alt="Chat Server icon">
       </a>
       <div class="showcase-description">
-        {% include texts/summaries/chat-server-summary.html %}
+        {% capture chat-server-summary %}{% include texts/summaries/chat-server-summary.md %}{% endcapture %}
+        {{ chat-server-summary | markdownify }}
       </div>
     </div>
     
