@@ -3,11 +3,16 @@ title: Fredrik Johansson
 description:
   This is the portfolio of Fredrik Johansson. It includes some of my work
   as an Interaction Designer, UI/UX designer and Software Developer.
-baseurl: ""
-  
+baseurl: "http://fredrik-johansson.com"
+
 # Build settings
 markdown: kramdown
-exclude: ["/assets/images-fullsize"]
+exclude: [
+        "/assets/images-fullsize",
+        "CNAME"
+      ]
+gems:
+  - jekyll-sitemap
 
 # Minify settings
 sass:
