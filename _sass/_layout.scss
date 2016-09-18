@@ -25,14 +25,10 @@
   }
   
   @include media-desktop() {
-    float: left;
-  }
-  
-  &:first-child {
-    margin-left: $box-size;  
-  }
-  &:last-child {
-    margin-right: $box-size;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    left: $box-size/2; // to align in middle wrapper ($box-size/2 margin on each side)
   }
   
   .showcase-description {
@@ -94,7 +90,12 @@
 #arcreader-showcase {
   .box {background-color: #de2a39;}
 }
-
+#reception2016-showcase {
+  .box {background-color: #629BD8;}
+}
+#malicious-mango-showcase {
+  .box {background-color: #325570;}
+}
 
 /**
  * Recent Work

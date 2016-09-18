@@ -14,11 +14,25 @@
         <div class="box"></div>
         {% endfor %}
         
-        <img src="/assets/images/arcreader-icon.png"  srcset="/assets/images/arcreader-icon.png 1x, /assets/images/arcreader-icon@2x.png 2x" alt="Arc Reader icon">
+        <img src="/assets/images/arcreader-icon.png" srcset="/assets/images/arcreader-icon.png 1x, /assets/images/arcreader-icon@2x.png 2x" alt="Arc Reader icon">
       </a>
       <div class="showcase-description">
         {% capture arcreader-summary %}{% include texts/summaries/arcreader-summary.md %}{% endcapture %}
         {{ arcreader-summary | markdownify }}
+      </div>
+    </div>
+    
+    <div id="reception2016-showcase" class="work-showcase">
+      <a href="/work/reception2016/" class="showcase-image">
+        {% for i in (1..9) %}
+        <div class="box"></div>
+        {% endfor %}
+        
+        <img src="/assets/images/reception2016-icon.png" srcset="/assets/images/reception2016-icon.png 1x, /assets/images/reception2016-icon@2x.png 2x" alt="Reception 2016 icon">
+      </a>
+      <div class="showcase-description">
+        {% capture reception2016-summary %}{% include texts/summaries/reception2016-summary.md %}{% endcapture %}
+        {{ reception2016-summary | markdownify }}
       </div>
     </div>
     
@@ -36,6 +50,19 @@
       </div>
     </div>
     
+    <div id="malicious-mango-showcase" class="work-showcase">
+      <a href="/work/maliciousmango/" class="showcase-image">
+        {% for i in (1..9) %}
+        <div class="box"></div>
+        {% endfor %}
+        
+        <img src="/assets/images/malicious-mango-icon.png" srcset="/assets/images/malicious-mango-icon.png 1x, /assets/images/malicious-mango-icon@2x.png 2x" alt="Malicious Mango icon">
+      </a>
+      <div class="showcase-description">
+        {% capture malicious-mango-summary %}{% include texts/summaries/malicious-mango-summary.md %}{% endcapture %}
+        {{ malicious-mango-summary | markdownify }}
+      </div>
+    </div>
     
     <div id="symbolism-vs-text-showcase" class="work-showcase">
       <a href="/work/symbolismvstext/" class="showcase-image">
