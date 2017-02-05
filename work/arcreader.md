@@ -10,8 +10,27 @@ permalink: /work/arcreader/
 The Arc Comic Reader is an application which does one thing and one thing well, reading comic book. It's design to both be easy to use, and have those advanced features.  There's no faffing about, you can easily access the next comic books you want to read and have all your comic organized neatly in a library.
 </span>
 
-![Arc Reader Gallery](/assets/images/arcreader-gallery.jpg)
+![Arc Reader Gallery](/assets/images/arc-reader-comics.png)
+
+*First screen of the application, showing currently reading comics, up next and also all comics*
 
 The main focus that I wanted to learn and focus on with developing this application was memory management. A comic books are essentially a row of very large images, together with showing a gallery with all kinds of thumbnails, memory limitations was a real concern and had to dealt with nicely. To make the application both fast in loading the images, but still display them in good quality required some serious planning. 
 
-*Currently in late stages of development*
+*Soon to be released on Google Play*
+
+![Arc Reader Gallery](/assets/images/arc-reader-collections.png)
+
+*Screen showing the collection in the application, which can be both auto generated and also manually created*
+
+![Arc Reader Gallery](/assets/images/arc-reader-collection.png)
+
+*After clicked on a collection, showing all comics in the collection*
+
+![Arc Reader Gallery](/assets/images/arc-reader-reading.png)
+
+*Screen when reading a comic, with controls showing. Clicking on screen makes the page go fullscreen and remove all visible controls*
+
+![Arc Reader Gallery](/assets/images/arc-reader-pages.png)
+
+*Screen for showing all pages of a comic book, to quickly get and overview or for searching specifics*
+
