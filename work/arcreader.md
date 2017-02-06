@@ -38,3 +38,15 @@ The main focus that I wanted to learn and focus on with developing this applicat
 
 *A web browser can be used to transfer comics directly to the applikation*
 
+<video autoplay="autoplay" controls loop
+  poster="/assets/images/arc-reader-comics.png" >
+  <source
+    src="/assets/videos/arc-reader.mp4"
+    type="video/mp4">
+  <source
+    src="/assets/videos/arc-reader.ogv"
+    type="video/ogg">
+  Can't play video
+</video>
+
+*A short demonstration of the application in action*
