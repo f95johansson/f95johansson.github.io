@@ -17,7 +17,7 @@
  */
   
 .work-showcase {
-  margin: $box-size $box-size/2;
+  margin: $box-size $box-size/2 0 $box-size/2;
   
   @include media-mobile() {
     margin: $box-size/4 auto !important;
@@ -78,32 +78,18 @@
   }
 }
 
-
-#calculator-identity-showcase {
-  .box {background-color: #06AC94;}
-}
-#chat-server-showcase {
-  .box {background-color: #AD45D3;}
-}
-#symbolism-vs-text-showcase {
-  .box {background-color: #F39700;}
-}
-#arcreader-showcase {
-  .box {background-color: #de2a39;}
-}
-#reception2016-showcase {
-  .box {background-color: #629BD8;}
-}
-#malicious-mango-showcase {
-  .box {background-color: #325570;}
-}
-
 /**
  * Recent Work
  */
 .recent-work {
   margin-top: 40px;
   overflow: hidden;
+
+  .more-work {
+    font-size: $font-size-medium;
+    float: right;
+    margin: $box-size/4 $box-size;
+  }
 }
 #recent-work-pixelation {
   width: $box-size;
@@ -113,8 +99,7 @@
     background-color: #D8D8D8;
   }
   
-  @import "pixelations/recent-work-pixelation"
-  
+  @import "pixelations/recent-work-pixelation" 
 }
 
 /**

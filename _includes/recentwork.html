@@ -8,7 +8,25 @@
   </div>
   
   <div class="wrapper">
+
+    {% for p in site.work %}
+      {% assign filename = p.relative_path | split: '/' | last %}
+      {% if site.front_page_show_case contains filename %}
+        <div class="work-showcase">
+          <a href="{{p.permalink}}" class="showcase-image">
+            {% for i in (1..9) %}
+            <div class="box" style="background-color: {{p.color}}"></div>
+            {% endfor %}
+            <img src="{{p.image}}" alt="{{p.title}}" {% if p.imageset %} srcset="{{p.imageset}}" {% endif %} >
+          </a>
+          <div class="showcase-description">
+            {{ p.summary | markdownify }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
     
+    <!--
     <div id="arcreader-showcase" class="work-showcase">
       <a href="/work/arcreader/" class="showcase-image">
         {% for i in (1..9) %}
@@ -50,7 +68,10 @@
         {% include texts/summaries/symbolism-vs-text-summary.html %}
       </div>
     </div>
+    -->
     
   </div>
   
+  <div class="wrapper"><a class="more-work" href="/work">More work</a></div>
+
 </section>

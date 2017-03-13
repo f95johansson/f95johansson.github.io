@@ -7,88 +7,23 @@
   </div>
   
   <div class="wrapper">
-    
-    <div id="arcreader-showcase" class="work-showcase">
-      <a href="/work/arcreader/" class="showcase-image">
-        {% for i in (1..9) %}
-        <div class="box"></div>
-        {% endfor %}
-        
-        <img src="/assets/images/arcreader-icon.png" srcset="/assets/images/arcreader-icon.png 1x, /assets/images/arcreader-icon@2x.png 2x" alt="Arc Reader icon">
-      </a>
-      <div class="showcase-description">
-        {% capture arcreader-summary %}{% include texts/summaries/arcreader-summary.md %}{% endcapture %}
-        {{ arcreader-summary | markdownify }}
-      </div>
-    </div>
-    
-    <div id="reception2016-showcase" class="work-showcase">
-      <a href="/work/reception2016/" class="showcase-image">
-        {% for i in (1..9) %}
-        <div class="box"></div>
-        {% endfor %}
-        
-        <img src="/assets/images/reception2016-icon.png" srcset="/assets/images/reception2016-icon.png 1x, /assets/images/reception2016-icon@2x.png 2x" alt="Reception 2016 icon">
-      </a>
-      <div class="showcase-description">
-        {% capture reception2016-summary %}{% include texts/summaries/reception2016-summary.md %}{% endcapture %}
-        {{ reception2016-summary | markdownify }}
-      </div>
-    </div>
-    
-    <div id="chat-server-showcase" class="work-showcase">
-      <a href="/work/chatserver/" class="showcase-image">
-        {% for i in (1..9) %}
-        <div class="box"></div>
-        {% endfor %}
-        
-        <img src="/assets/images/chat-server-icon.png" alt="Chat Server icon">
-      </a>
-      <div class="showcase-description">
-        {% capture chat-server-summary %}{% include texts/summaries/chat-server-summary.md %}{% endcapture %}
-        {{ chat-server-summary | markdownify }}
-      </div>
-    </div>
-    
-    <div id="malicious-mango-showcase" class="work-showcase">
-      <a href="/work/maliciousmango/" class="showcase-image">
-        {% for i in (1..9) %}
-        <div class="box"></div>
-        {% endfor %}
-        
-        <img src="/assets/images/malicious-mango-icon.png" srcset="/assets/images/malicious-mango-icon.png 1x, /assets/images/malicious-mango-icon@2x.png 2x" alt="Malicious Mango icon">
-      </a>
-      <div class="showcase-description">
-        {% capture malicious-mango-summary %}{% include texts/summaries/malicious-mango-summary.md %}{% endcapture %}
-        {{ malicious-mango-summary | markdownify }}
-      </div>
-    </div>
-    
-    <div id="symbolism-vs-text-showcase" class="work-showcase">
-      <a href="/work/symbolismvstext/" class="showcase-image">
-        {% for i in (1..9) %}
-        <div class="box"></div>
-        {% endfor %}
-        
-        <img src="/assets/images/symbolism-vs-text-icon.png" srcset="/assets/images/symbolism-vs-text-icon.png 1x, /assets/images/symbolism-vs-text-icon@2x.png 2x" alt="Symbolism Vs Text icon">
-      </a>
-      <div class="showcase-description">
-        {% include texts/summaries/symbolism-vs-text-summary.html %}
-      </div>
-    </div>
-    
-    <div id="calculator-identity-showcase" class="work-showcase">
-      <a href="/work/calculatoridentity/" class="showcase-image">
-        {% for i in (1..9) %}
-        <div class="box"></div>
-        {% endfor %}
-        
-        <img src="/assets/images/calculator-identity-icon.png" srcset="/assets/images/calculator-identity-icon.png 1x, /assets/images/calculator-identity-icon@2x.png 2x" alt="Calculator Identity icon">
-      </a>
-      <div class="showcase-description">
-        {% include texts/summaries/calculator-identity-summary.html %}
-      </div>
-    </div>
+
+    {% assign work = site.work | sort: "weight", "last" %}
+    {% for p in work %}
+      {% if p.title != "Work" %}
+        <div class="work-showcase">
+          <a href="{{p.permalink}}" class="showcase-image">
+            {% for i in (1..9) %}
+            <div class="box" style="background-color: {{p.color}}"></div>
+            {% endfor %}
+            <img src="{{p.image}}" alt="{{p.title}}" {% if p.imageset %} srcset="{{p.imageset}}" {% endif %} >
+          </a>
+          <div class="showcase-description">
+            {{ p.summary | markdownify }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
     
   </div>
   

@@ -22,6 +22,11 @@ compress_html:
   comments: ["<!--", "-->"]
   clippings: all
 
+collections:
+  work:
+    output: true
+
+front_page_show_case: [arcreader.md, chatserver.md, symbolismvstext.md]
 
 navigation:
     - text: Home
