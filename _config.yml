@@ -26,7 +26,7 @@ collections:
   work:
     output: true
 
-front_page_show_case: [arcreader.md, chatserver.md, symbolismvstext.md]
+front_page_show_case: ["arcreader.md", "chatserver.md", "symbolismvstext.md"]
 
 navigation:
     - text: Home
